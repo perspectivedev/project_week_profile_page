@@ -1,0 +1,140 @@
+/*******************************************************  *******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather&display=swap');
+/*************************************************** css variables ***************************************************/
+:root {
+    --perspective-clr-1: #aed8e6;
+    --perspective-clr-2: #a4a9d8;
+    --perspective-clr-3: #282973;
+    --perspective-aclr-1: #f20ad5;
+    --perspective-aclr-2: #333333;
+    --perspective-aclr-3: #d861d8;
+    --primary-clr-1: #fff;
+    --primary-clr-2: #f4f9f9;
+    --primary-clr-3: #7b93c1;
+    --primary-clr-4: #000;
+    --primary-clr-5: #fcf5f0;
+    --primary-clr-6: #cd9a45;
+    --primary-clr-7: rgba(52, 79, 86, .6);
+    --accent-clr-1: #f20ad5;
+    --accent-clr-2: #d861d8;
+    --text-clr-1: #333;
+    --border-radius: 8px;
+    --border: 2px inset #aed8e6;
+    --dot-border: 2px dotted var(--perspective-clr-3);
+    --border-dot: 2px dotted var(--perspective-clr-3);
+    --box-shadow: 5px 5px 6px hsla(218, 31%, 80%, 0.6);
+    --background-clr: rgba(0, 0, 0, 0.4);
+    --ff-Unna: Unna;
+    --ff-Unna-b: Bold;
+    --ff-Unna-i: Italic;
+    --f-sz: calc(11px + (18 - 11) * ((100vw - 400px) / (940 - 400)));
+    --transition: all ease .3s;
+}
+
+/******************************************************* Clear fix *******************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    background: var(--primary-clr-2);
+}
+
+/******************************************************* header *******************************************************/
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: var(--f-sz);
+    color: var(--accent-clr-1);
+}
+
+
+.user-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 3px dotted var(--primary-clr-7);
+    box-shadow: 2px 3px 3px var(--perspective-aclr-2);
+}
+
+.first-lv-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.5rem;
+}
+
+
+/******************************************************* main content *******************************************************/
+
+.main-content {
+    background: url("../images/image0.jpg") left 90% no-repeat fixed;
+    margin: 0 auto;
+    padding: 18rem;
+}
+
+.background-img-1 {
+    width: 700px;
+    height: 700px;
+    border-radius: 0 100px;
+}
+
+#landing-page {
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    /* border: 2px solid #cd9a45; */
+    padding: 1rem 0;
+    width: 60%;
+}
+
+.contact-btn {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-family:'Merriweather', serif;
+    font-size: 22px;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--accent-clr-1);
+    color: var(--primary-clr-1);
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+}
+
+.user > p {
+    font-family: 'Lobster', cursive;
+    background: none;
+    text-align: center;
+    font-size: 30px;
+    color: var(--primary-clr-1);
+    padding-bottom: .5rem;
+}
+
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
+/*******************************************************  *******************************************************/
