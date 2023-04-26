@@ -74,9 +74,9 @@
 /******************************************************* main content *******************************************************/
 
 .main-content {
-    background: url("../images/image0.jpg") left 90% no-repeat fixed;
+    background: url("../images/image0.jpg") left 81% no-repeat ;
     margin: 0 auto;
-    padding: 18rem;
+    padding: 20rem;
 }
 
 .background-img-1 {
