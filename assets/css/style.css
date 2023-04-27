@@ -97,6 +97,7 @@ nav > ul li a {
 
 /******************************************************* main content *******************************************************/
 
+
 .main-content {
     background: url("../images/image0.jpg") left 81% no-repeat ;
     margin: 0 auto;
@@ -133,6 +134,7 @@ nav > ul li a {
     border-radius: 10px;
     border: none;
     width: 50%;
+    cursor: pointer;
 }
 
 .user > p {
@@ -143,39 +145,95 @@ nav > ul li a {
     color: var(--primary-clr-1);
     padding-bottom: .5rem;
 }
+
+
 /******************************************************* mobile *******************************************************/
-@media  only screen and (min-width: 400px){
-.main-content {
+@media  only screen and (max-width: 400px){
+
+    .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+    font-size: 18px;
+    color: var(--accent-clr-1);
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    color: #12366f;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 1rem 0 0.275rem 0;
+}
+
+.close {
+    display: none;
+}
+
+    .user-img {
+    display: none;
+}
+
+nav {
+    display: none;
+}
+
+    .first-lv-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.5rem;
+    cursor: pointer;
+}
+
+    .main-content {
     width: 200px;
-    height: 300px;
-    background: url("../images/image-3.jpg") 20% 20% contain no-repeat fixed;
+    height: 600px;
+    background: url("../images/mk.JPG") 49% 30% no-repeat fixed;
     margin: 0 auto;
-    padding: 5rem;
-    }
+    padding: 6rem;
+}
+
+    .user {
+    display: flex;
+    flex-direction: column;
+    /* background: blue; */
+    width: 100%;
+    margin: 60% 60% 0 60%;
+}
 
     .user > p {
-        font-family: 'Lobster', cursive;
-        background: none;
-        text-align: center;
-        font-size: 15px;
-        color: var(--primary-clr-1);
-        padding-bottom: .5rem;
-    }
+    font-family: 'Lobster', cursive;
+    background: none;
+    text-align: center;
+    font-size: 18px;
+    color: var(--primary-clr-1);
+    padding-bottom: .5rem;
+}
 
     .contact-btn {
-        display: flex;
-        flex: 1;
-        justify-content: center;
-        font-family:'Merriweather', serif;
-        font-size: 11px;
-        padding: 1rem;
-        margin: 1rem;
-        background: var(--accent-clr-1);
-        color: var(--primary-clr-1);
-        border-radius: 10px;
-        border: none;
-        width: 50%;
-    }
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-family:'Merriweather', serif;
+    font-size: 14px;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--accent-clr-1);
+    color: var(--primary-clr-1);
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+    .contact-btn:hover {
+    background: var(--accent-clr-2);
+}
+
 }
 
 
