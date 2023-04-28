@@ -14,20 +14,16 @@
 <body>
     <div class="container">
         <header class="site-header">
-			<button class="hamburger" aria-expanded="false" id="toggle-button">
+			<button role="button" class="hamburger" aria-expanded="false" id="toggle-button">
 				<span class="open">&#x2630</span>
 				<span class="close">&#x0058</span>
 			</button>
             <img id="user-card" class="user-img" src="./assets/images/image-1.jpg" alt="photo">
-            <nav>
+            <nav id="site-nav">
                 <ul class="first-lv-nav">
                     <li class="lv-1-link link1">
                         <a href="projects.html">projects</a>
-                    <ul class="lv-2-link">
-                        <li >
-                            profile page
-                        </li>
-                    </ul></li>
+                    </li>
                     <li class="lv-1-link link2">
                         <a href="resume.html">resume</a>
                     </li>
@@ -40,7 +36,23 @@
         <main class="main-content">
             <div class="user">
             <p>Marvis J. Knight</p>
-                <button type="button" class="contact-btn">Contact</button>
+                <button id="contact" type="button" class="contact-btn">Contact</button>
+            </div>
+            <div id="simpleModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="closeBtn">&times;</span>
+                        <h2>Contact Me Here</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><a href="tel:+2532057830">Give me a call</a></p>
+                        <p>Or</p>
+                        <p><a href="mailto:knightmar78@gmail.com">Send me an email</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <h3>2023 &copy; Marvis Knight</h3>
+                    </div>
+                </div>
             </div>
         </main>
     </div>

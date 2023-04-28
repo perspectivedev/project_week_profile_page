@@ -1,5 +1,6 @@
 /*******************************************************  *******************************************************/
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather&display=swap');
+@import url(../css/modal.css);
 /*************************************************** css variables ***************************************************/
 :root {
     --perspective-clr-1: #aed8e6;
@@ -40,8 +41,10 @@
     text-decoration: none;
     background: var(--primary-clr-2);
 }
+/******************************************************* desktop *******************************************************/
+@media only screen and (max-width: 2000px) {
 
-/******************************************************* header *******************************************************/
+    /******************************************************* header *******************************************************/
 
 .site-header {
     display: flex;
@@ -61,14 +64,20 @@
     border-radius: 50%;
     border: 3px dotted var(--primary-clr-7);
     box-shadow: 2px 3px 3px var(--perspective-aclr-2);
+    margin: 1rem 0;
 }
+
 /******************************************************* nav section *******************************************************/
+
+.hamburger {
+    display: none;
+}
 
 .first-lv-nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 1.5rem;
+    margin: 0 1.5rem;
     cursor: pointer;
 }
 
@@ -91,7 +100,7 @@ nav > ul li a {
     display:flex;
     flex-direction: column;
     transition: var(--transition);
-    padding: .2rem;
+    padding: 0 .2rem;
 }
 
 
@@ -99,7 +108,7 @@ nav > ul li a {
 
 
 .main-content {
-    background: url("../images/image0.jpg") left 81% no-repeat ;
+    background: url("../images/image-2.jpg") 15% 80% no-repeat ;
     margin: 0 auto;
     padding: 20rem;
 }
@@ -145,18 +154,109 @@ nav > ul li a {
     color: var(--primary-clr-1);
     padding-bottom: .5rem;
 }
+}
 
+/******************************************************* tablet *******************************************************/
+
+@media only screen and (max-width: 800px) {
+    .site-header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: .5rem 0rem;
+        font-size: var(--f-sz);
+        color: var(--accent-clr-1);
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .user-img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 50%;
+        border: 3px dotted var(--primary-clr-7);
+        box-shadow: 2px 3px 3px var(--perspective-aclr-2);
+        margin-right:3rem;
+    }
+
+
+/******************************************************* main-content *******************************************************/
+
+.main-content {
+    width: 450px;
+    height: 600px;
+    background: url("../images/image-4.jpg") 35% 6% no-repeat fixed;
+    margin: 0 auto;
+    padding: 8rem;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.user > p {
+    font-family: 'Lobster', cursive;
+    background: none;
+    text-align: center;
+    font-size: 40px;
+    color: var(--primary-clr-1);
+}
+
+.contact-btn {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-family:'Merriweather', serif;
+    font-size: 36px;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--accent-clr-1);
+    color: var(--primary-clr-1);
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background: var(--accent-clr-2);
+}
+
+
+/******************************************************* site-nav *******************************************************/
+
+#site-nav {
+    width: 60%;
+}
+
+.hamburger {
+    display: none;
+}
+}
 
 /******************************************************* mobile *******************************************************/
 @media  only screen and (max-width: 400px){
 
-    .site-header {
+.site-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 .5rem;
+    align-content: center;
+    padding: 0;
     font-size: 18px;
     color: var(--accent-clr-1);
+    width: 90%;
+}
+
+.site-header {
+    flex: 1;
+}
+
+#site-nav {
+    width: 90%;
 }
 
 .hamburger {
@@ -166,30 +266,66 @@ nav > ul li a {
     color: #12366f;
     font-size: 24px;
     font-weight: 600;
-    padding: 1rem 0 0.275rem 0;
+    padding: 0;
+    transition: all ease-in-out .6s;
+    margin-left: .4rem;
 }
 
-.close {
+.first-lv-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+
+[aria-expanded="false"] .close {
     display: none;
+}
+
+[aria-expanded="false"] ~ #site-nav {
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+
+[aria-expanded="true"] .open {
+    display: flex;
+}
+
+[aria-expanded="true"] ~ #site-nav {
+    width: 100%;
+}
+
+[aria-expanded="true"] .open {
+    display: none;
+}
+
+[aria-expanded="true"] {
+    order: 1;
+}
+
+#site-nav {
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+
+.link1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
 }
 
     .user-img {
     display: none;
 }
 
-nav {
-    display: none;
-}
 
-    .first-lv-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 1.5rem;
-    cursor: pointer;
-}
+/******************************************************* main-content *******************************************************/
 
-    .main-content {
+.main-content {
     width: 200px;
     height: 600px;
     background: url("../images/mk.JPG") 49% 30% no-repeat fixed;
@@ -197,15 +333,14 @@ nav {
     padding: 6rem;
 }
 
-    .user {
+.user {
     display: flex;
     flex-direction: column;
-    /* background: blue; */
     width: 100%;
     margin: 60% 60% 0 60%;
 }
 
-    .user > p {
+.user > p {
     font-family: 'Lobster', cursive;
     background: none;
     text-align: center;
@@ -214,7 +349,7 @@ nav {
     padding-bottom: .5rem;
 }
 
-    .contact-btn {
+.contact-btn {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -230,25 +365,8 @@ nav {
     cursor: pointer;
 }
 
-    .contact-btn:hover {
+.contact-btn:hover {
     background: var(--accent-clr-2);
 }
 
 }
-
-
-
-
-
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
-/*******************************************************  *******************************************************/
