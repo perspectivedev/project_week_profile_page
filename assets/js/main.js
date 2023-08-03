@@ -111,15 +111,12 @@ function toggleChevron(){
 }
 
 function toggleLearnPanel(element) {
-    element = this.document.querySelector('.learn-section-1').lastElementChild;
+    element = element.parentElement.parentElement.lastElementChild;
+    // element = element.lastElementChild;
+    // element = document.querySelector('.learn-section-1').lastElementChild;
     console.log(element);
-    let btnPanel = document.querySelector('.btn-learn-panel');
-    element = this.document.querySelector('.learn-section-1').lastElementChild;
-    console.log(element);
-    element === document.querySelector('.learn-section-1') ? element.classList.toggle('desc') : element.classList.remove('desc');
-    // element = this.document.querySelector('.learn-section-2').lastElementChild;
-    // element === document.querySelector('.learn-section-2') ? element.classList.toggle('desc') : element.classList.remove('desc');
-    toggleChevron(element);
+    element ? element.classList.toggle('desc') : element.classList.remove('desc');
+    toggleChevron();
     console.log(element);
 }
 
