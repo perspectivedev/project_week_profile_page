@@ -1,0 +1,512 @@
+/*************************************************** css variables ***************************************************/
+:root {
+    --perspective-clr-1: #aed8e6;
+    --perspective-clr-2: #a4a9d8;
+    --perspective-clr-3: #282973;
+    --perspective-aclr-1: #f20ad5;
+    --perspective-aclr-2: #333333;
+    --perspective-aclr-3: #d861d8;
+    --primary-clr-1: #fff;
+    --primary-clr-2: #f4f9f9;
+    --primary-clr-3: #7b93c1;
+    --primary-clr-4: #000;
+    --primary-clr-5: #fcf5f0;
+    --primary-clr-6: #cd9a45;
+    --primary-clr-7: rgba(52, 79, 86, .6);
+    --accent-clr-1: #f20ad5;
+    --accent-clr-2: #d861d8;
+    --text-clr-1: #333;
+    --border-radius: 8px;
+    --border: 2px inset #aed8e6;
+    --dot-border: 2px dotted var(--perspective-clr-3);
+    --border-dot: 2px dotted var(--perspective-clr-3);
+    --box-shadow: 5px 5px 6px hsla(218, 31%, 80%, 0.6);
+    --background-clr: rgba(0, 0, 0, 0.4);
+    --bg-clr-1: #111;
+    --bg-clr-2: #eee;
+    --ff-Unna: Unna;
+    --ff-Unna-b: Bold;
+    --ff-Unna-i: Italic;
+    --f-sz: calc(11px + (18 - 11) * ((100vw - 400px) / (940 - 400)));
+    --transition: all ease .3s;
+}
+
+/******************************************************* desktop *******************************************************/
+@media only screen and (max-width: 2000px){
+/******************************************************* toggle dark/light mode *******************************************************/
+body.dark-mode {
+    background-color:  var(--bg-clr-1);
+    color: var(--bg-clr-2);
+
+    .btn-toggle-dark {
+        background: var(--bg-clr-1);
+        color: var(--bg-clr-2);
+    }
+}
+
+    body.light-mode {
+        background-color: var(--bg-clr-2);
+        color: var(--bg-clr-1);
+
+        .btn-toggle-dark {
+        background: var(--bg-clr-2);
+        color: var(--bg-clr-1);
+        }
+    }
+
+    .btn-dark-mode {
+        padding: .375rem;
+        color: var(--accent-clr-1);
+        background: transparent;
+        border-radius: 8px;
+        border: .15rem solid rgba(255, 255, 255, 0.1);
+        font-size:  var(--f-sz);
+    }
+
+    .btn-dark-mode:hover {
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+
+    .index-body {
+        position: relative;
+    }
+
+    .btn-dark-mode {
+        position: absolute;
+        top: 20%;
+        left: 2.5%;
+    }
+
+.index-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: var(--f-sz);
+    color: var(--accent-clr-1);
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin: 1rem 0;
+}
+
+/******************************************************* nav section *******************************************************/
+
+.hamburger {
+    display: none;
+}
+
+#site-nav {
+    width: 50%;
+}
+
+.first-lv-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 1.5rem;
+    cursor: pointer;
+}
+
+nav > ul li a {
+    color: var(--accent-clr-1);
+}
+
+.link1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lv-2-link {
+    display: none;
+}
+
+.link1:hover > .lv-2-link {
+    display:flex;
+    flex-direction: column;
+    transition: var(--transition);
+    padding: 0 .2rem;
+}
+
+/******************************************************* main content *******************************************************/
+
+
+.main-content {
+    background: url("../images/image-2.jpg") 15% 80% no-repeat ;
+    margin: 0 auto;
+    padding: 20rem;
+}
+
+
+
+#landing-page {
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    padding: 1rem 0;
+    width: 60%;
+}
+
+.contact-btn {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-family:'Merriweather', serif;
+    font-size: 22px;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--accent-clr-1);
+    color: var(--primary-clr-1);
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+.user > p {
+    font-family: 'Lobster', cursive;
+    background: none;
+    text-align: center;
+    font-size: 30px;
+    color: var(--primary-clr-1);
+    padding-bottom: .5rem;
+}
+}
+
+/******************************************************* tablet *******************************************************/
+
+@media only screen and (max-width: 800px) {
+    .dark-mode {
+        background: black;
+        color: var(--primary-clr-1);
+    }
+
+    .btn-dark-mode {
+        padding: .275rem;
+        color: var(--accent-clr-1);
+        background: transparent;
+        border-radius: 8px;
+        border: none;
+        font-size:  var(--f-sz);
+    }
+
+    .index-header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: .5rem 0rem;
+        font-size: var(--f-sz);
+        color: var(--accent-clr-1);
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .site-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-right:3rem;
+    }
+
+
+/******************************************************* main-content *******************************************************/
+
+.main-content {
+    width: 450px;
+    height: 600px;
+    background: url("../images/image-4.jpg") 35% 6% no-repeat fixed;
+    margin: 0 auto;
+    padding: 8rem;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.user > p {
+    font-family: 'Lobster', cursive;
+    background: none;
+    text-align: center;
+    font-size: 40px;
+    color: var(--primary-clr-1);
+}
+
+.contact-btn {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-family:'Merriweather', serif;
+    font-size: 36px;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--accent-clr-1);
+    color: var(--primary-clr-1);
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background: var(--accent-clr-2);
+}
+
+
+/******************************************************* site-nav *******************************************************/
+
+#site-nav {
+    width: 60%;
+}
+
+.hamburger {
+    display: none;
+}
+}
+
+/******************************************************* mobile *******************************************************/
+@media  only screen and (max-width: 400px){
+
+    body.dark-mode {
+        background-color:  var(--bg-clr-1);
+        color: var(--bg-clr-2);
+
+        .index-header,
+        .project-heade,
+        .resume-header,
+        .about-header {
+
+            .hamburger {
+                background-color: var(--bg-clr-1);
+                color: var(--bg-clr-2);
+            }
+
+            .closeBtn {
+                background-color: var(--bg-clr-1);
+                color: var(--bg-clr-2);
+            }
+        }
+    
+    
+        .btn-toggle-dark {
+            background: var(--bg-clr-1);
+            color: var(--bg-clr-2);
+        }
+    
+    }
+    
+        body.light-mode {
+            background-color: var(--bg-clr-2);
+            color: var(--bg-clr-1);
+
+            .index-header,
+            .project-header,
+            .resume-header,
+            .about-header {
+
+                .hamburger {
+                background-color: var(--bg-clr-2);
+                color: var(--bg-clr-1);
+                }
+
+                .closeBtn {
+                    background-color: var(--bg-clr-2);
+                    color: var(--bg-clr-1);
+                }
+            }
+    
+            .btn-toggle-dark {
+                background: var(--bg-clr-2);
+                color: var(--bg-clr-1);
+            }
+    
+        }
+
+
+.btn-dark-mode {
+    padding: .575rem;
+    color: var(--accent-clr-1);
+    background: transparent;
+    border-radius: 8px;
+    border: .15rem solid rgba(255, 255, 255, 0.1);
+    font-size:  var(--f-sz);
+}
+
+.btn-dark-mode:hover {
+    background: var(--accent-clr-1);
+    color: white;
+}
+
+.index {
+    position: relative;
+}
+
+.btn-dark-mode {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.index-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0;
+    font-size: 18px;
+    color: var(--accent-clr-1);
+    width: 90%;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.index-header {
+    flex: 1;
+}
+
+#site-nav {
+    width: 90%;
+}
+
+.index-header > .hamburger {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    color: #12366f;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0;
+    transition: all ease-in-out .6s;
+    margin-left: .4rem;
+    background: transparent
+}
+
+.first-lv-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+
+[aria-expanded="false"] .close {
+    display: none;
+}
+
+[aria-expanded="false"] ~ #site-nav {
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+
+[aria-expanded="true"] .open {
+    display: flex;
+}
+
+[aria-expanded="true"] ~ #site-nav {
+    width: 100%;
+}
+
+[aria-expanded="true"] .open {
+    display: none;
+}
+
+[aria-expanded="true"] {
+    order: 1;
+}
+
+#site-nav {
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+
+.link1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .logo {
+    display: none;
+}
+
+
+/******************************************************* main-content *******************************************************/
+
+.main-content {
+    width: 200px;
+    height: 600px;
+    background: url("../images/mk.JPG") 49% 30% no-repeat fixed;
+    margin: 0 auto;
+    padding: 6rem;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 60% 60% 0 60%;
+}
+
+.user > p {
+    font-family: 'Lobster', cursive;
+    background: none;
+    text-align: center;
+    font-size: 18px;
+    color: var(--primary-clr-1);
+    padding-bottom: .5rem;
+}
+
+.contact-btn {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-family:'Merriweather', serif;
+    font-size: 14px;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--accent-clr-1);
+    color: var(--primary-clr-1);
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background: var(--accent-clr-2);
+}
+
+}

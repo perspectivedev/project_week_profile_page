@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="icon" href="./assets/images/favicon.ico" type="image">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="./assets/js/main.js" defer></script>
     <title>Resume</title>
 </head>
-<body>
-    
+<body id="body" class="resume-body">
+    <header class="site-header resume-header">
+        <button  type="button" class="hamburger" aria-expanded="false" id="toggle-button">
+            <span class="open">&#x2630;</span>
+            <span class="close">&#x0058;</span>
+        </button>
+        <!-- <img id="user-card" class="user-img" src="./assets/images/image-1.jpg" alt="photo"> -->
+        <img src="./assets/images/logo.png" id="main-icon" class="logo" alt="perspective media logo">
+        <nav id="site-nav">
+            <ul class="first-lv-nav">
+                <li class="lv-1-link link2">
+                    <a href="index.html">home</a>
+                </li>
+                <li class="lv-1-link link1">
+                    <a href="project.html">projects</a>
+                </li>
+                <li class="lv-1-link link3">
+                    <a href="about.html">about</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode" id="btn-toggle-dark" class="btn-dark-mode">dark</button>
+    <main resume-content>
+        <div class="resume-img"><img src="./assets/images/resume.png" alt="image of resume" class="img-resume"></div>
+    </main>
 </body>
 </html>
