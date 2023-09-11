@@ -1,5 +1,6 @@
 // This are all the variables that I set to preform the functionality for my site.
 const body = document.getElementById('body');
+console.log(body);
 const btnDarkMode = document.getElementById('btn-toggle-dark');
 const hamburger = document.getElementById('toggle-button');
 const open = document.querySelector('.open');
@@ -29,23 +30,12 @@ hamburger.addEventListener('click', () => {
     }
 });
 
-// function toggleLearnPanel(element){
-//     let btnPanel = document.querySelector('.btn-learn-panel');
-//     btnPanel ? btnPanel.classList.toggle('animateChevron') : btnPanel.classList.remove('animateChevron');
-//     element = btnPanel;
-//     element ? desc.classList.toggle('desc') : desc.classList.remove('desc');
-// }
-
-btnPanel.addEventListener('change', toggleChevron);
 
 // EventListeners are assigned to each function to open and close the modal and when you click outside the modal it will register the event and call the function to close the modal.
 contactBtn.addEventListener('click', openModal);
 
 closeBtn.addEventListener('click', closeModal);
 
-// btnPanel.addEventListener('click', () => {
-//         btnPanel ? btnPanel.classList.toggle('animateChevron') : btnPanel.classList.remove('animateChevron');
-// });
 
 window.addEventListener('click', clickOutSide);
 
@@ -64,59 +54,55 @@ function clickOutSide(e){
     }
 }
 
-// This function toggles the light and dark mode functionality.
+btnDarkMode.addEventListener('change', setThemeFromCookie);
+
+
+// // This function toggles the light and dark mode functionality.
 function toggleDarkLight(){
     const body = document.getElementById('body');
+    console.log(body);
     const currentClass = body.className;
     body.className = currentClass == 'dark-mode' ?  'light-mode' : 'dark-mode';
+    console.log(body);
 }
 
 function togglePageContentLightDark(){
     const body = document.getElementById('body');
+    console.log(body);
     const currentClass = body.className;
     const newClass = currentClass == 'dark-mode' ?  'light-mode' : 'dark-mode';
     body.className = newClass;
-
+    console.log(body);
     const endDate = new Date();
     endDate.setFullYear(endDate.getFullYear() + 10);
-    document.cookie = 'theme' + (newClass == 'light-mode' ?  'light' : 'dark') + '; Expires=' + endDate + ';';
+    document.cookie = 'theme=' + (newClass == 'light-mode' ?  'light' : 'dark') + '; Expires=' + endDate + ';';
     console.log('Cookies are now:' + document.cookie);
 }
 
 function isDarkThemeSelected(){
-    return document.cookie.match(/theme=dark/i) != null;
+    console.log(document.cookie.match(/theme=dark/i));
+    return document.cookie.match(/theme=dark/i) !== null;
 }
 
 function setThemeFromCookie(){
     const body = document.getElementById('body');
+    console.log(body);
     body.className = isDarkThemeSelected() ? 'dark-mode' : 'light-mode';
+    console.log(body);
 }
 
 (function(){
-    setThemeFromCookie()
+    setThemeFromCookie();
 })();
 
-// ToggleLearnPanel
-function toggleLearnPanel(element){
-        let btnPanel = document.querySelector('.btn-learn-panel');
-        btnPanel ? btnPanel.classList.toggle('animateChevron') : btnPanel.classList.remove('animateChevron');
-        element = btnPanel;
-    element ? desc.classList.toggle('desc') : desc.classList.remove('desc');
-}
-
-function toggleChevron(){
-    let btnPanel = document.querySelector('.btn-learn-panel');
-    btnPanel ? btnPanel.classList.toggle('animateChevron') : btnPanel.classList.remove('animateChevron');
-    console.log(btnPanel);
-}
-
 function toggleLearnPanel(element) {
+    element ? element.classList.toggle('animateChevron') : element.classList.remove('animateChevron');
     element = element.parentElement.parentElement.lastElementChild;
-    // element = element.lastElementChild;
-    // element = document.querySelector('.learn-section-1').lastElementChild;
-    console.log(element);
     element ? element.classList.toggle('desc') : element.classList.remove('desc');
-    toggleChevron();
-    console.log(element);
 }
 
+console.log(setThemeFromCookie());
+console.log(isDarkThemeSelected());
+console.log(togglePageContentLightDark());
+console.log(toggleDarkLight());
+console.log(body);

@@ -185,6 +185,7 @@ nav > ul li a {
     margin: 10% auto;
     width: 700px;
     height: 900px;
+    image-rendering: high-quality;
     border: 1px solid rgba(0,0,0,0.2);
     box-shadow: 1px 2px 2px;
 }
@@ -236,31 +237,41 @@ nav > ul li a {
         height: 50px;
         margin-right:3rem;
     }
+
+    .resume-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        image-rendering: high-quality;
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 /******************************************************* mobile *******************************************************/
 
 @media  only screen and (max-width: 400px) {
-    /* .dark-mode {
+    .dark-mode {
         background: black;
         color: var(--primary-clr-1);
     } */
     
-    /* .btn-dark-mode {
+    .btn-dark-mode {
         padding: .575rem;
         color: var(--accent-clr-1);
         background: transparent;
         border-radius: 8px;
         border: .15rem solid rgba(255, 255, 255, 0.1);
         font-size:  var(--f-sz);
-    } */
+    }
     
-    /* .btn-dark-mode:hover {
+    .btn-dark-mode:hover {
         background: var(--accent-clr-1);
         color: white;
-    } */
+    }
     
-    /* .resume-body {
+    .resume-body {
         position: relative;
     }
     
@@ -269,7 +280,31 @@ nav > ul li a {
         top: 20%;
         left: 5%;
     }
+
     
+    .resume-img {
+        image-rendering: high-quality;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .img-resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    /* .img-resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 50%;
+        padding: 4rem;
+        margin: 2rem auto;
+    } */
+
     .resume-header {
         display: flex;
         justify-content: space-between;
@@ -355,8 +390,8 @@ nav > ul li a {
         cursor: pointer;
     }
     
-        .logo {
-        display: none;
-    } */
+    .logo {
+    display: none;
+    }
     
 }

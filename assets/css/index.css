@@ -34,7 +34,7 @@
 /******************************************************* desktop *******************************************************/
 @media only screen and (max-width: 2000px){
 /******************************************************* toggle dark/light mode *******************************************************/
-body.dark-mode {
+/* body.dark-mode {
     background-color:  var(--bg-clr-1);
     color: var(--bg-clr-2);
 
@@ -52,7 +52,7 @@ body.dark-mode {
         background: var(--bg-clr-2);
         color: var(--bg-clr-1);
         }
-    }
+    } */
 
     .btn-dark-mode {
         padding: .375rem;

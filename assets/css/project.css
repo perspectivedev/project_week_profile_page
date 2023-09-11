@@ -36,14 +36,14 @@
 
 @media only screen and (max-width: 2000px){
     /******************************************************* toggle dark/light mode *******************************************************/
-    body.dark-mode {
+    /* body.dark-mode {
         background-color:  var(--bg-clr-1);
         color: var(--bg-clr-2);
 
-        /* .hamburger {
+        .hamburger {
             background-color: var(--bg-clr-1);
             color: var(--bg-clr-2);
-        } */
+        }
 
         .btn-toggle-dark {
             background: var(--accent-clr-1);
@@ -64,10 +64,10 @@
             background: var(--accent-clr-1);
         }
 
-        /* .closeBtn {
+        .closeBtn {
             background-color: var(--bg-clr-1);
             color: var(--bg-clr-2);
-        } */
+        }
 
         .project-header {
                 border-bottom: .110rem solid var(--bg-clr-2);
@@ -78,10 +78,10 @@
             background-color: var(--bg-clr-2);
             color: var(--bg-clr-1);
 
-            /* .hamburger {
+            .hamburger {
             background-color: var(--bg-clr-2);
             color: var(--bg-clr-1);
-            } */
+            }
 
         .btn-toggle-dark {
             background: var(--primary-clr-1);
@@ -103,15 +103,15 @@
                 color: var(--bg-clr-2);
             }
 
-            /* .closeBtn {
+            .closeBtn {
                 background-color: var(--bg-clr-2);
                 color: var(--bg-clr-1);
-            } */
+            }
 
             .project-header {
                     border-bottom: .110rem solid var(--bg-clr-1);
             }
-        }
+        } */
 
 /******************************************************* header *******************************************************/
 

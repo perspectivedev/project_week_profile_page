@@ -49,57 +49,88 @@
 
 /******************************************************* desktop *******************************************************/
 
-/* body.dark-mode {
+body.dark-mode {
+    /* this is the general background for the body and color */
     background-color:  var(--bg-clr-1);
     color: var(--bg-clr-2);
+/* this is specific instances in which I want to change during the eventState */
+    .about-header,
+    .project-header,
+    .resume {
+        border-bottom: .110rem solid var(--bg-clr-2);
+    }
+
+    .learn-section-1 {
+        border-top: 1px solid var(--bg-clr-2);
+        border-bottom: 1px solid var(--bg-clr-2);
+    }
+
+    .chevron {
+        background-color: var(--bg-clr-1);
+        color: var(--bg-clr-2);
+    }
+
+    .chevron:hover {
+        background: var(--accent-clr-1);
+    }
+
     .hamburger {
         background-color: var(--bg-clr-1);
         color: var(--bg-clr-2);
     }
+
     .btn-toggle-dark {
         background: var(--bg-clr-1);
         color: var(--bg-clr-2);
     }
-    .closeBtn {
-        background-color: var(--bg-clr-1);
-        color: var(--bg-clr-2);
-    }
-    .site-header {
-        .project > header {
-            border-bottom: .110rem solid var(--bg-clr-2);
-        }
-        .resume > header {
-            border-bottom: .110rem solid var(--bg-clr-2);
-        }
 
+    .closeBtn {
+        background-color: var(--accent-clr-1);
+        color: var(--bg-clr-1);
     }
+
 }
 
     body.light-mode {
         background-color: var(--bg-clr-2);
         color: var(--bg-clr-1);
+
+        .project-header,
+        .about-header,
+        .resume {
+            border-bottom: .110rem solid var(--bg-clr-1);
+        }
+
+        .learn-section-1 {
+            border-top: 1px solid var(--bg-clr-1);
+            border-bottom: 1px solid var(--bg-clr-1);
+        }
+
+        .chevron {
+            background-color: var(--bg-clr-2);
+            color: var(--bg-clr-1);
+        }
+
+        .chevron:hover {
+            background: var(--accent-clr-1);
+            color: var(--bg-clr-2);
+        }
+
         .hamburger {
         background-color: var(--bg-clr-2);
         color: var(--bg-clr-1);
         }
+
         .btn-toggle-dark {
             background: var(--bg-clr-2);
             color: var(--bg-clr-1);
         }
-        .closeBtn {
-            background-color: var(--bg-clr-2);
-            color: var(--bg-clr-1);
-        }
-        .site-header {
-            .project > header {
-                border-bottom: .110rem solid var(--bg-clr-1);
-            }
-            .resume > header {
-                border-bottom: .110rem solid var(--bg-clr-1);
-            }
 
+        .closeBtn {
+            background-color: var(--accent-clr-1);
+            color: var(--bg-clr-2);
         }
-    } */
+    }
 
 /* @media only screen and (max-width: 2000px) { */
     /******************************************************* header *******************************************************/
