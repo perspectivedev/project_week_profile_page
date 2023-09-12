@@ -36,43 +36,6 @@
 
 @media only screen and (max-width: 2000px){
     /******************************************************* toggle dark/light mode *******************************************************/
-    /* body.dark-mode {
-        background-color:  var(--bg-clr-1);
-        color: var(--bg-clr-2);
-
-        .hamburger {
-            background-color: var(--bg-clr-1);
-            color: var(--bg-clr-2);
-        }
-
-        .btn-toggle-dark {
-            background: var(--accent-clr-1);
-            color: var(--primary-clr-1);
-        }
-
-        .learn-section-1 {
-            border-top: 1px solid var(--bg-clr-2);
-            border-bottom: 1px solid var(--bg-clr-2);
-        }
-
-        .chevron {
-            background-color: var(--bg-clr-1);
-            color: var(--bg-clr-2);
-        }
-
-        .chevron:hover {
-            background: var(--accent-clr-1);
-        }
-
-        .closeBtn {
-            background-color: var(--bg-clr-1);
-            color: var(--bg-clr-2);
-        }
-
-        .project-header {
-                border-bottom: .110rem solid var(--bg-clr-2);
-        }
-    }
     
         body.light-mode {
             background-color: var(--bg-clr-2);
@@ -292,12 +255,19 @@ padding: 0 .2rem;
     perspective: 700px;
 }
 
-.project-img {
+.chat-img {
+    width: 90%;
+    height: 90%;
+}
+
+.project-img,
+.chat-img {
     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.4);
     transform: skewX(-5deg);
 }
 
-.project-img:hover {
+.project-img:hover,
+.chat-img:hover {
     transform: scale(1, 1);
     transition: all ease-in-out .2s;
 }
